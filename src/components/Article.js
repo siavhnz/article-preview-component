@@ -27,7 +27,7 @@ const Article = () => {
           <div>
             <img src={Avatar} alt="" />
             <span>Michelle Appleton</span>
-            <date>28 Jun 2020</date>
+            <time>28 Jun 2020</time>
           </div>
           <div>
             <span> Share</span>
