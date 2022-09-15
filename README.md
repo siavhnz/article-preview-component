@@ -41,6 +41,9 @@ Users should be able to:
 
  - Preparing workflow (Installing React, Adding assets)
 
+ - Identifying and creating components
+    - Article
+
 ### Built with
 
 - Semantic HTML5 markup
