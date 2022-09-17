@@ -9,13 +9,13 @@ const Article = () => {
   return (
     <article className={styleUtils.container}>
       <div className={styleUtils["header-img"]}></div>
-      <div>
-        <div className={styleUtils.middle}>
-          <h1 className={styleUtils.middle__title}>
+      <div className={styleUtils["right-section"]}>
+        <div className={styleUtils.body}>
+          <h1 className={styleUtils.body__title}>
             Shift the overall look and feel by adding these wonderful touches to
             furniture in your home
           </h1>
-          <p className={styleUtils.middle__desc}>
+          <p className={styleUtils.body__desc}>
             Ever been in a room and felt like something was missing? Perhaps it
             felt slightly bare and uninviting. I’ve got some simple tips to help
             you make any room feel complete.
@@ -33,7 +33,9 @@ const Article = () => {
               <time className={styleUtils.author__date}>28 Jun 2020</time>
             </div>
           </div>
-          <div className={styleUtils["sharing-icons"]}>
+          <div
+            className={`${styleUtils["sharing-icons"]} ${styleUtils.active}`}
+          >
             <span className={styleUtils["sharing-icons__title"]}> Share</span>
             <a href="https://facebook.com" rel="noopener noreferrer">
               <FacebookIcon />

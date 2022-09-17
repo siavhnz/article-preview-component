@@ -47,6 +47,8 @@ Users should be able to:
 
  - Working on mobile desing based on `design` folder
 
+ - Working on responsiveness design based on `desig` folder
+
 
 
 ### Built with
