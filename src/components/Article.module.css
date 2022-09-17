@@ -250,11 +250,11 @@
 }
 
 @media (min-width:90em) { /* 1440px */
-    .sharing-icons.active {
+    .footer.active .sharing-icons {
         right: -4.25rem;
     }
 
-    .sharing-icons.active::after {
+    .footer.active .sharing-icons::after {
         right: 45%;
     }
 }

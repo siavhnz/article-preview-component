@@ -60,14 +60,26 @@ const Article = () => {
 
           <div className={styleUtils["sharing-icons"]}>
             <span className={styleUtils["sharing-icons__title"]}> Share</span>
-            <a href="https://facebook.com" rel="noopener noreferrer">
-              <FacebookIcon />
+            <a
+              href="https://facebook.com"
+              rel="noopener noreferrer"
+              aria-label="go to facebook"
+            >
+              <FacebookIcon focusable="false" />
             </a>
-            <a href="https://twitter.com" rel="noopener noreferrer">
-              <TwitterIcon />
+            <a
+              href="https://twitter.com"
+              rel="noopener noreferrer"
+              aria-label="go to twitter"
+            >
+              <TwitterIcon focusable="false" />
             </a>
-            <a href="https://pinterest.com" rel="noopener noreferrer">
-              <PinterestIcon />
+            <a
+              href="https://pinterest.com"
+              rel="noopener noreferrer"
+              aria-label="go to pinterest"
+            >
+              <PinterestIcon focusable="false" />
             </a>
           </div>
 
@@ -76,7 +88,7 @@ const Article = () => {
               aria-label="click to open sharing links"
               onClick={toggleIconsHandler}
             >
-              <ShareIcon />
+              <ShareIcon focusable="false" />
             </button>
           </div>
         </footer>

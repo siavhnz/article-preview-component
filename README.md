@@ -13,7 +13,6 @@ This is a solution to the [Article preview component challenge on Frontend Mento
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -34,7 +33,7 @@ Users should be able to:
 
 - Solution: [frontendmentor.io](https://your-solution-url.com)
 
-- Live Site: [netlify.app](https://your-live-site-url.com)
+- Live Site: [netlify.app](https://article-preview-ch.netlify.app/)
 
 ## My process
 
