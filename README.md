@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution: [frontendmentor.io](https://your-solution-url.com)
+- Solution: [frontendmentor.io](https://www.frontendmentor.io/solutions/article-preview-component-hofG8enYOZ)
 
 - Live Site: [netlify.app](https://article-preview-ch.netlify.app/)
 
