@@ -49,12 +49,14 @@ Users should be able to:
 
  - Working on responsiveness design based on `desig` folder
 
+ - Working on React functionality for sharing icons
+
 
 
 ### Built with
 
 - [React](https://reactjs.org/)
-- [Styled Components](https://styled-components.com/) - For styles
+- [CSS Modules](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/) - For styles
 - Mobile-first workflow
 - Semantic HTML5 markup
 - CSS custom properties
@@ -63,13 +65,24 @@ Users should be able to:
 
 
 ### What I learned
+For smooth toggling sharing icons I used animation keyframes that was fun
 
+```
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.footer.active .sharing-icons {
+  animation: fadeIn 1s;
+}
+
+```
 
 ### Continued development
 
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+React, React and also React
 
 ## Author
 

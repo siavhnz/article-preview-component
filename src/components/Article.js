@@ -4,8 +4,32 @@ import { ReactComponent as FacebookIcon } from "../images/icon-facebook.svg";
 import { ReactComponent as TwitterIcon } from "../images/icon-twitter.svg";
 import { ReactComponent as PinterestIcon } from "../images/icon-pinterest.svg";
 import styleUtils from "./Article.module.css";
+import { useState } from "react";
 
 const Article = () => {
+  /**
+   * Logic for toggling sharing icons
+   */
+  const [sharingIsVisible, setSharingIsVisible] = useState(false);
+
+  const toggleIconsHandler = (event) => {
+    event.preventDefault();
+    setSharingIsVisible((prevState) => !prevState);
+  };
+
+  //require classes for toggling sharing icons
+  let footerClasses = styleUtils.footer,
+    authorClasses = styleUtils.author;
+
+  if (sharingIsVisible) {
+    footerClasses = `${styleUtils.footer} ${styleUtils.active}`;
+    authorClasses = `${styleUtils.author} ${styleUtils["inactive-in-mobile"]}`;
+  }
+
+  /**
+   * End Logic
+   */
+
   return (
     <article className={styleUtils.container}>
       <div className={styleUtils["header-img"]}></div>
@@ -21,8 +45,8 @@ const Article = () => {
             you make any room feel complete.
           </p>
         </div>
-        <footer className={`${styleUtils.footer}`}>
-          <div className={styleUtils.author}>
+        <footer className={footerClasses}>
+          <div className={authorClasses}>
             <img
               className={styleUtils.author__avatar}
               src={Avatar}
@@ -33,9 +57,8 @@ const Article = () => {
               <time className={styleUtils.author__date}>28 Jun 2020</time>
             </div>
           </div>
-          <div
-            className={`${styleUtils["sharing-icons"]} ${styleUtils.active}`}
-          >
+
+          <div className={styleUtils["sharing-icons"]}>
             <span className={styleUtils["sharing-icons__title"]}> Share</span>
             <a href="https://facebook.com" rel="noopener noreferrer">
               <FacebookIcon />
@@ -47,8 +70,12 @@ const Article = () => {
               <PinterestIcon />
             </a>
           </div>
+
           <div className={styleUtils.footer__action}>
-            <button aria-label="click to open sharing links">
+            <button
+              aria-label="click to open sharing links"
+              onClick={toggleIconsHandler}
+            >
               <ShareIcon />
             </button>
           </div>

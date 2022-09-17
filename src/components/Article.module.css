@@ -52,12 +52,14 @@
     padding:1.1rem 2rem;
     border-bottom-left-radius: var(--border-radius-size);
     border-bottom-right-radius: var(--border-radius-size);
+    transition: all 0.5s ease;
 }
 
 .author {
     display: flex;
     column-gap: 1rem;
     flex-grow: 1;
+    min-height: 2.5rem;
 }
 
 .author__avatar {
@@ -83,10 +85,8 @@
 }
 
 .sharing-icons {
-    display: flex;
-    align-items: center;
-    column-gap: 1.1rem;
-    flex-grow: 1;
+    display: none;
+    min-height: 2.5rem;
 }
 
 .sharing-icons__title {
@@ -106,6 +106,7 @@
     padding: 0.5rem;
     margin-top:0.25rem;
     border-radius: 100%;
+    transition: all 0.5s ease;
 
     /* make button squre*/
     box-sizing: content-box;
@@ -118,7 +119,10 @@
 }
 
 
-/* active states on action click*/
+/*
+ active states on action click
+ this style is used in mobile
+*/
 
 .footer.active {
     background-color:var(--dark-grayish-blue);
@@ -130,10 +134,27 @@
     color:var(--light-grayish-blue);
 }
 
+.footer.active .sharing-icons {
+    display: flex;
+    align-items: center;
+    column-gap: 1.1rem;
+    flex-grow: 1;
+}
+
+.inactive-in-mobile {
+    display: none;
+}
+
 
 /* 
     Responsive design
 */
+
+@media (max-width: 23em) {
+    .container {
+        margin: 0.25rem;
+    }
+}
 
 @media (min-width:40em) { /* 640px */
     .container {
@@ -194,18 +215,26 @@
     }
 
     
-    /* active states on action click*/
+    /* 
+        active states on action click
+        this style is used on tablet and bigger screens  
+    */
 
-    .sharing-icons.active {
+    .footer.active {
+        background-color:transparent;
+    }
+
+    .footer.active .sharing-icons {
         position:absolute;
         right: 1rem;
         top: -100%;
         background-color: var(--dark-grayish-blue);
         padding: 1rem 2.25rem;
         border-radius: var(--border-radius-size);
+        animation: fadeIn 1s;
     }
 
-    .sharing-icons.active::after {
+    .footer.active .sharing-icons::after {
         content: "";
         border:0.75rem solid transparent;
         border-top-color: var(--dark-grayish-blue);
@@ -213,6 +242,11 @@
         bottom: -1.5rem;
         right: 11%;
     }
+
+    .inactive-in-mobile {
+        display: flex;
+    }
+
 }
 
 @media (min-width:90em) { /* 1440px */
@@ -223,4 +257,11 @@
     .sharing-icons.active::after {
         right: 45%;
     }
+}
+
+/* animations */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
