@@ -54,7 +54,7 @@ const Article = () => {
             />
             <div className={styleUtils.author__info}>
               <span className={styleUtils.author__name}>Michelle Appleton</span>
-              <time className={styleUtils.author__date}>28 Jun 2020</time>
+              <span className={styleUtils.author__date}>28 Jun 2020</span>
             </div>
           </div>
 
