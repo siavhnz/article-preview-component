@@ -33,6 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution: [frontendmentor.io](https://your-solution-url.com)
+
 - Live Site: [netlify.app](https://your-live-site-url.com)
 
 ## My process
@@ -44,16 +45,20 @@ Users should be able to:
  - Identifying and creating components
     - Article
 
+ - Working on mobile desing based on `design` folder
+
+
+
 ### Built with
 
+- [React](https://reactjs.org/)
+- [Styled Components](https://styled-components.com/) - For styles
+- Mobile-first workflow
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+
 
 ### What I learned
 

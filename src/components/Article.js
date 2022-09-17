@@ -1,36 +1,40 @@
-import Drawers from "../images/drawers.jpg";
 import Avatar from "../images/avatar-michelle.jpg";
 import { ReactComponent as ShareIcon } from "../images/icon-share.svg";
 import { ReactComponent as FacebookIcon } from "../images/icon-facebook.svg";
 import { ReactComponent as TwitterIcon } from "../images/icon-twitter.svg";
 import { ReactComponent as PinterestIcon } from "../images/icon-pinterest.svg";
+import styleUtils from "./Article.module.css";
 
 const Article = () => {
   return (
-    <article>
+    <article className={styleUtils.container}>
+      <div className={styleUtils["header-img"]}></div>
       <div>
-        <img src={Drawers} alt="drawers" />
-      </div>
-      <div>
-        <div>
-          <h1>
+        <div className={styleUtils.middle}>
+          <h1 className={styleUtils.middle__title}>
             Shift the overall look and feel by adding these wonderful touches to
             furniture in your home
           </h1>
-          <p>
+          <p className={styleUtils.middle__desc}>
             Ever been in a room and felt like something was missing? Perhaps it
             felt slightly bare and uninviting. I’ve got some simple tips to help
             you make any room feel complete.
           </p>
         </div>
-        <footer>
-          <div>
-            <img src={Avatar} alt="" />
-            <span>Michelle Appleton</span>
-            <time>28 Jun 2020</time>
+        <footer className={`${styleUtils.footer}`}>
+          <div className={styleUtils.author}>
+            <img
+              className={styleUtils.author__avatar}
+              src={Avatar}
+              alt="Michelle Appleton"
+            />
+            <div className={styleUtils.author__info}>
+              <span className={styleUtils.author__name}>Michelle Appleton</span>
+              <time className={styleUtils.author__date}>28 Jun 2020</time>
+            </div>
           </div>
-          <div>
-            <span> Share</span>
+          <div className={styleUtils["sharing-icons"]}>
+            <span className={styleUtils["sharing-icons__title"]}> Share</span>
             <a href="https://facebook.com" rel="noopener noreferrer">
               <FacebookIcon />
             </a>
@@ -41,7 +45,7 @@ const Article = () => {
               <PinterestIcon />
             </a>
           </div>
-          <div>
+          <div className={styleUtils.footer__action}>
             <button aria-label="click to open sharing links">
               <ShareIcon />
             </button>
